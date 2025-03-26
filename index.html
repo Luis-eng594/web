@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo Sorpresa</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8e8e8;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .gift-box {
+            width: 150px;
+            height: 150px;
+            background: url('https://cdn-icons-png.flaticon.com/512/2543/2543107.png') no-repeat center/cover;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="gift-box" onclick="revealGift()"></div>
+    <div id="surprise" class="hidden">
+        <img src="img/101.jpg" alt="Dedo medio con perro">
+       
+    </div>
+
+    <script>
+        function revealGift() {
+            document.querySelector('.gift-box').style.display = 'none';
+            document.getElementById('surprise').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
